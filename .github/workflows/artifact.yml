@@ -2,9 +2,6 @@ name: Artifact
 
 on: [push]
 
-env: 
-  _ARTIFACT_NAME: myartifact
-
 jobs:
   main:
     runs-on: ubuntu-latest
@@ -15,5 +12,5 @@ jobs:
       - name: Upload the artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env._ARTIFACT_NAME }}
+          name: ${{ env.ARTIFACT_NAME }}
           path: .
