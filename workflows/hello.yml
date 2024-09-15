@@ -9,6 +9,7 @@ jobs:
     steps:
       - name: Step one
         uses: actions/checkout@v4
+
       - name: Step two
         run: env | sort
 
@@ -18,5 +19,7 @@ jobs:
     steps:
       - name: Step one
         uses: actions/checkout@v4
+
       - name: Step two
         run: "Get-ChildItem Env: | Sort-Object Name"
+
